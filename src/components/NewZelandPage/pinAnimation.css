@@ -1,0 +1,146 @@
+/*
+Posiciones del pin
+  Slide 1 => top: 46%; left: 53%;*
+  Slide 2 => top: 52%; left: 52%;*
+  Slide 3 => top: 63%; left: 41%;*
+  Slide 4 => top: 63.5%; left: 58%;*
+  Slide 5 => top: 54%; left: 68%;*
+  Slide 6 => top: 50%; left: 66%;*
+  Slide 7 => top: 38%; left: 61%;*
+  Slide 8 => top: 32%; left: 56.5%;*
+  Slide 9 => top: 39%; left: 58%;*
+  Slide 10 => top: 34.5%; left: 47.5%;
+  Slide 11 => top: 34.5%; left: 47.5%;
+*/  
+
+.pin {
+  position: absolute;    
+  transform: translate(-50%, -50%);
+  z-index: 10;
+
+  view-timeline-name: --pin;
+  view-timeline-axis: y;
+
+  animation-name: pin;
+  animation-timeline: scroll();
+  animation-fill-mode: both;
+  animation-range-start: 0%;
+  animation-range-end: 100%;
+}
+
+@keyframes pin {
+  0% { 
+    top: 46%; left: 53%; opacity: 1; transform: translate(-50%, -50%) scale(1);
+  }
+  4% { 
+    top: 46%; left: 53%; opacity: 1; transform: translate(-50%, -50%) scale(1);
+  }
+  5% { 
+    top: 46%; left: 53%; opacity: 0; transform: translate(-50%, -50%) scale(0);
+  }
+  5.01% { 
+    top: 52%; left: 52%; opacity: 0; transform: translate(-50%, -50%) scale(0);
+  }
+  6% { 
+    top: 52%; left: 52%; opacity: 1; transform: translate(-50%, -50%) scale(1);
+  }
+  14% { 
+    top: 52%; left: 52%; opacity: 1; transform: translate(-50%, -50%) scale(1);
+  }
+  15% { 
+    top: 52%; left: 52%; opacity: 0; transform: translate(-50%, -50%) scale(0);
+  }
+  15.01% { 
+    top: 63%; left: 41%; opacity: 0; transform: translate(-50%, -50%) scale(0);
+  }
+  16% { 
+    top: 63%; left: 41%; opacity: 1; transform: translate(-50%, -50%) scale(1);
+  }
+  24% { 
+    top: 63%; left: 41%; opacity: 1; transform: translate(-50%, -50%) scale(1);
+  }
+  25% { 
+    top: 63%; left: 41%; opacity: 0; transform: translate(-50%, -50%) scale(0);
+  }
+  25.01% { 
+    top: 63.5%;  left: 58%; opacity: 0; transform: translate(-50%, -50%) scale(0);
+  }
+  26% { 
+    top: 63.5%;  left: 58%; opacity: 1; transform: translate(-50%, -50%) scale(1);
+  }
+  34% {
+    top: 63.5%; left: 58%; opacity: 1; transform: translate(-50%, -50%) scale(1);
+  }
+  35% {
+    top: 63.5%; left: 58%; opacity: 0; transform: translate(-50%, -50%) scale(0);
+  }
+  35.01% {
+    top: 54%; left: 68%; opacity: 0; transform: translate(-50%, -50%) scale(0);
+  }
+  36% {
+    top: 54%; left: 68%; opacity: 1; transform: translate(-50%, -50%) scale(1);
+  }
+  44% {
+    top: 54%; left: 68%; opacity: 1; transform: translate(-50%, -50%) scale(1);
+  }
+  45% {
+    top: 54%; left: 68%; opacity: 0; transform: translate(-50%, -50%) scale(0);
+  }
+  45.01% {
+    top: 50%; left: 66%; opacity: 0; transform: translate(-50%, -50%) scale(0);
+  }
+  46% {
+    top: 50%; left: 66%; opacity: 1; transform: translate(-50%, -50%) scale(1);
+  }
+  54% {
+    top: 50%; left: 66%; opacity: 1; transform: translate(-50%, -50%) scale(1);
+  }
+  55% {
+    top: 50%; left: 66%; opacity: 0; transform: translate(-50%, -50%) scale(0);
+  }
+  55.01% {
+    top: 38%; left: 61%; opacity: 0; transform: translate(-50%, -50%) scale(0);
+  }
+  56% {
+    top: 38%; left: 61%; opacity: 1; transform: translate(-50%, -50%) scale(1);
+  }
+  64% {
+    top: 38%; left: 61%; opacity: 1; transform: translate(-50%, -50%) scale(1);
+  }
+  65% {
+    top: 38%; left: 61%; opacity: 0; transform: translate(-50%, -50%) scale(0);
+  }
+  65.01% {
+    top: 32%; left: 56.5%; opacity: 0; transform: translate(-50%, -50%) scale(0);
+  }
+  66% {
+    top: 32%; left: 56.5%; opacity: 1; transform: translate(-50%, -50%) scale(1);
+  }
+  74% {
+    top: 32%; left: 56.5%; opacity: 1; transform: translate(-50%, -50%) scale(1);
+  }
+  75% {
+    top: 32%; left: 56.5%; opacity: 0; transform: translate(-50%, -50%) scale(0);
+  }
+  75.01% {
+    top: 39%; left: 58%; opacity: 0; transform: translate(-50%, -50%) scale(0);
+  }
+  76% {
+    top: 39%; left: 58%; opacity: 1; transform: translate(-50%, -50%) scale(1);
+  }
+  84% {
+    top: 39%; left: 58%; opacity: 1; transform: translate(-50%, -50%) scale(1);
+  }
+  85% {
+    top: 39%; left: 58%; opacity: 0; transform: translate(-50%, -50%) scale(0);
+  }
+  85.01% {
+    top: 34.5%; left: 47.5%; opacity: 0; transform: translate(-50%, -50%) scale(0);
+  }
+  86% {
+    top: 34.5%; left: 47.5%; opacity: 6; transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    top: 34.5%; left: 47.5%; opacity: 6; transform: translate(-50%, -50%) scale(1);
+  }
+}
