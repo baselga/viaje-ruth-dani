@@ -1,0 +1,222 @@
+---
+import mapImage from "../../assets/nortIslandMap.webp";
+import nzImage from "../../assets/nuevaZelanda.jpg";
+import nzSlide1 from "../../assets/nz-slide-1.jpg";
+import nzSlide10 from "../../assets/nz-slide-10.jpg";
+import nzSlide11 from "../../assets/nz-slide-11.jpg";
+import nzSlide3 from "../../assets/nz-slide-3.jpg";
+import nzSlide4 from "../../assets/nz-slide-4.jpg";
+import nzSlide5 from "../../assets/nz-slide-5.jpg";
+import nzSlide6 from "../../assets/nz-slide-6.jpg";
+import nzSlide7 from "../../assets/nz-slide-7.webp";
+import nzSlide8 from "../../assets/nz-slide-8.jpg";
+import nzSlide9 from "../../assets/nz-slide-9.jpg";
+import pin from "../../assets/pin.png"
+
+import Notebook from "../Notebook.astro";
+import Slide from "../Slide.astro";
+---
+
+<main class="root">
+  <header class="header font-title">
+    <a href="/" class="back">
+      {"< Volver"}
+    </a>
+    <h1>Nueva Zelanda - R&D</h1>
+  </header>
+  <Slide bgImage={`url(${nzSlide1.src})`} bgPosition="center bottom">
+    <Notebook title="Llegamos a Nueva Zelanda" date="Lunes 1/09">
+      <p>
+        A las 05:00 (UTC+12) aterrizamos en el aeropuerto internacional de
+        Auckland.
+      </p>
+      <p>
+        Recogemos nuestro coche de alquiler a las 7:30 y nos vamos hacia
+        Hamilton donde pasaremos el primer día.
+      </p>
+    </Notebook>
+  </Slide>
+  <Slide bgImage={`url(${nzImage.src})`} bgPosition="center bottom">
+    <Notebook title="Hobbiton y Waitomo" date="Martes 2/09">
+      <p>
+        Visita a <a
+          href="https://www.hobbitontours.com/"
+          target="_blank"
+          rel="noopener noreferrer">Hobbiton</a
+        >. Veremos los famosos sets de filmación de "El Señor de los Anillos".
+      </p>
+      <p>
+        Tras comer en el <i>The Green Dragon Inn</i>, nos dirigimos a las <a
+          href="https://www.waitomo.com/"
+          target="_blank"
+          rel="noopener noreferrer">Cuevas de Waitomo</a
+        > para explorar sus impresionantes formaciones de piedra caliza y ver las
+        famosas luciérnagas.
+      </p>
+      <p>Para finalizar el día, viajamos a Egmont donde dormiremos.</p>
+    </Notebook>
+  </Slide>
+  <Slide bgImage={`url(${nzSlide3.src})`}>
+    <Notebook title="Egmont y traslado a Tongariro" date="Miércoles 3/09">
+      <p>
+        Hoy exploramos el Parque Nacional Egmont, cuyo volcán inspiró a J.R.R.
+        Tolkien para crear la Montaña Solitaria.
+      </p>
+      <p>
+        Después de una ducha y una comida rápida, nos dirigimos hacia el Parque
+        Nacional Tongariro.
+      </p>
+    </Notebook>
+  </Slide>
+  <Slide bgImage={`url(${nzSlide4.src})`}>
+    <Notebook title="Tongariro" date="Jueves 4/09">
+      <p>
+        Hoy exploramos el Parque Nacional Tongariro, donde realizamos una
+        caminata por los impresionantes paisajes montañosos.
+      </p>
+      <p>
+        El Monte del Destino, donde Frodo destruye el Anillo Único, es en realidad el monte Ngauruhoe.
+      </p>
+    </Notebook>
+  </Slide>
+  <Slide bgImage={`url(${nzSlide5.src})`}>
+    <Notebook title="Wai-O-Tapu" date="Viernes 5/09">
+      <p>
+        La primera parada del día será en las Tawhai Falls. Es el escenario
+        donde Gollum pesca antes de que Faramir lo capture en <i
+          >"Las Dos Torres"</i
+        >.
+      </p>
+      <p>
+        Tras esto visitaremos el área geotérmica de Wai-O-Tapu, famosa por sus
+        coloridas formaciones y el géiser Lady Knox.
+      </p>
+      <p>Por último, nos dirigiremos a Rotorua a descansar.</p>
+    </Notebook>
+  </Slide>
+  <Slide bgImage={`url(${nzSlide6.src})`}>
+    <Notebook title="Rotorua y Redwoods" date="Sábado 6/09">
+      <p>Pasaremos la mañana visitando la ciudad de Rotorua.</p>
+      <p>
+        Tras comer nos dirigiremos hacía el bosque de Whakarewarewa a disfrutar
+        de sus enormes secuoyas rojas.
+      </p>
+      <p>
+        Al atardecer daremos un paseo por <a
+          href="https://www.redwoods.co.nz/"
+          target="_blank"
+          rel="noopener noreferrer">Reedwoods Treewalk</a
+        >. Una experiencia mágica entre los árboles.
+      </p>
+    </Notebook>
+  </Slide>
+  <Slide bgImage={`url(${nzSlide7.src})`}>
+    <Notebook title="Día de playas" date="Domingo 7/09">
+      <p>
+        Toca visitar playas. Tras un par de horas de coche llegaremos a Pokohino
+        Beach. De ahí iremos a la playa de Te Whanganui-A-Hei (Catedrales).
+      </p>
+      <p>Para acabar el día nos dirigiremos a Coromandel para descansar.</p>
+    </Notebook>
+  </Slide>
+  <Slide bgImage={`url(${nzSlide8.src})`}>
+    <Notebook title="Tren y Coastal Walkway" date="Lunes 8/09">
+      <p>
+        Empezaremos el día con un recorrido en tren a través de puentes, túneles
+        y curvas en zig-zag, hasta un mirador llamado Eyefull Tower.
+      </p>
+      <p>
+        Una vez en la costa, realizaremos el Coastal Walkway, un sendero que nos
+        llevará a través de hermosas playas y acantilados.
+      </p>
+    </Notebook>
+  </Slide>
+  <Slide bgImage={`url(${nzSlide9.src})`}>
+    <Notebook title="Waiotahi y Thames" date="Martes 9/09">
+      <p>
+        Comenzamos con la ruta Waiotahi, un antiguo acceso a las minas de oro
+        que atraviesa el parque nacional de Coromandel.
+      </p>
+      <p>
+        Al terminar la excursión, salimos de Thames para devolver el coche en el
+        aeropuerto. Hacemos noche en Auckland.
+      </p>
+    </Notebook>
+  </Slide>
+  <Slide bgImage={`url(${nzSlide10.src})`}>
+    <Notebook title="Auckland" date="Miércoles 10/09">
+      <p>
+        Auckland es famosa por su conexión con el mar. Caminaremos por Queen
+        Street, cruzaremos por Viaduct Harbour hasta llegar a Silo Park.
+      </p>
+      <p>Por la noche cenaremos en el Sky Tower.</p>
+    </Notebook>
+  </Slide>
+  <Slide bgImage={`url(${nzSlide11.src})`}>
+    <Notebook title="Bye bye NZ!" date="Jueves 11/09">
+      <p>Tras 11 días en Nueva Zelanda, es hora de despedirnos. Pero este no es el final, nuestro próximo destino nos aguarda.</p>      
+    </Notebook>
+  </Slide>
+  <aside class="map">
+    <img src={mapImage.src} alt="" />
+    <div class="pin">
+      <img src={pin.src} width="24px" height="24px" alt="" />
+    </div>
+  </aside>
+</main>
+
+<style>
+  .root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: var(--color-zinc-900);
+  }
+
+  .header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-amber-200);
+    text-shadow: 0 0 4px var(--color-black);
+    z-index: 10;
+    width: 100%;
+    padding: 0 5%;
+    & > .back {
+      color: currentColor;
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+      &:hover {
+        color: var(--color-amber-200);
+      }
+    }
+  }
+
+  .map {
+    position: fixed;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+  }
+  /*
+    Posiciones del pin
+      Slide 1 => top: 46%; left: 53%;
+      Slide 2 => top: 52%; left: 52%;
+      Slide 3 => top: 63%; left: 41%;
+      Slide 4 => top: 63.5%; left: 58%;
+      Slide 5 => top: 54%; left: 68%;
+      Slide 6 => top: 50%; left: 66%;
+      Slide 7 => top: 38%; left: 61%;
+      Slide 8 => top: 32%; left: 56.5%;
+      Slide 9 => top: 39%; left: 58%;
+      Slide 10 => top: 34.5%; left: 47.5%;
+      Slide 11 => top: 34.5%; left: 47.5%;
+   */
+  .map .pin {
+    position: absolute;
+    top: 46%; left: 53%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+</style>

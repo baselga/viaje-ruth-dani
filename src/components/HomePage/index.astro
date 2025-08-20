@@ -1,0 +1,165 @@
+---
+import nzImage from "../../assets/nuevaZelanda.jpg";
+import pfImage from "../../assets/polinesia.jpg";
+---
+
+<main class="root">
+  <section class="home-slide-1">
+    <!-- <div class="overlay"></div> -->
+    <div class="hero font-title">
+      <h1>Luna de miel</h1>
+      <h2>R&D</h2>
+    </div>
+  </section>
+  <section class="home-slide-2">
+    <a class="card" href="/nueva-zelanda">
+      <img src={nzImage.src} alt="Nueva Zelanda" style="view-transition-name: image-1;"/>
+      <h3 class="font-title">Nueva Zelanda</h3>
+    </a>
+    <a class="card" href="/">
+      <img src={pfImage.src} alt="Polinesia Francesa" />
+      <h3 class="font-title">Polinesia Francesa</h3>
+    </a>
+  </section>
+</main>
+
+<style>
+  .root {
+    display: flex;
+    flex-direction: column;
+  }
+  @keyframes heroH1 {
+    from {
+      top: 38%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(1);
+      color: var(--color-amber-100);
+    }
+    to {
+      top: 10%;
+      left: 15%;
+      transform: translate(-50%, -50%) scale(0.5);
+      color: var(--color-amber-200);
+    }
+  }
+  @keyframes heroH2 {
+    from {
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, -25%) scale(1);
+      color: var(--color-amber-100);
+    }
+    to {
+      top: 2%;
+      right: 12%;
+      transform: translate(50%, -25%) scale(0.2);
+      color: var(--color-amber-200);
+    }
+  }
+  .home-slide-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    width: 100%;
+    height: 100dvh;
+    background: linear-gradient(
+      to bottom,
+      var(--color-zinc-500) 0px,
+      var(--color-stone-900) 50%,
+      var(--color-zinc-900) 100%
+    );
+    /* color: var(--color-stone-200); */
+    color: var(--color-amber-100);
+
+    & .hero > h1 {
+      position: fixed;
+      font-size: 5rem;
+      margin: 0;
+      padding: 0;
+      top: 38%;
+      left: 50%;      
+
+      view-timeline-name: --heroH1;
+      view-timeline-axis: y;
+
+      animation-name: heroH1;
+      animation-timeline: scroll();
+      animation-fill-mode: both;
+    }
+    & .hero > h2 {
+      position: fixed;
+      font-size: 15rem;
+      margin: 0;
+      padding: 0;
+      top: 50%;
+      right: 50%;
+      view-timeline-name: --heroH2;
+      view-timeline-axis: y;
+
+      animation-name: heroH2;
+      animation-timeline: scroll();
+      animation-fill-mode: both;
+    }    
+  }
+  .home-slide-2 {
+    width: 100%;
+    height: 100dvh;
+    background-color: var(--color-zinc-900);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    & .card {
+      /* color: var(--color-stone-200); */
+      color: var(--color-amber-50);
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      overflow: hidden;
+      border-radius: 8px;
+      background: currentColor;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 12px;
+
+      & > img {
+        aspect-ratio: 16/9;
+        width: 100%;
+        max-width: 600px;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center bottom;
+        transition: filter 300ms ease-in-out;
+        filter: brightness(0.4);
+        border-radius: 5px;
+      }
+
+      & > h3 {
+        position: absolute;
+        grid-column: 1;
+        z-index: 2;
+        color: currentColor;
+        font-size: 3rem;
+        transition: all 300ms ease-in-out;
+      }
+
+      &:hover {
+        & > h3 {
+          transform: scale(1.7);
+          rotate: -15deg;
+        }
+        & > img {
+          filter: brightness(0.5);
+        }
+      }
+    }
+  }
+</style>
