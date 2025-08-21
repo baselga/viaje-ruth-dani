@@ -1,5 +1,5 @@
 ---
-import nzImage from "../../assets/nuevaZelanda.jpg";
+import nzImage from "../../assets/nuevaZelanda.webp";
 import pfImage from "../../assets/polinesia.jpg";
 ---
 
@@ -13,7 +13,11 @@ import pfImage from "../../assets/polinesia.jpg";
   </section>
   <section class="home-slide-2">
     <a class="card" href="/nueva-zelanda">
-      <img src={nzImage.src} alt="Nueva Zelanda" style="view-transition-name: image-1;"/>
+      <img
+        src={nzImage.src}
+        alt="Nueva Zelanda"
+        style="view-transition-name: image-1;"
+      />
       <h3 class="font-title">Nueva Zelanda</h3>
     </a>
     <a class="card" href="/">
@@ -39,7 +43,7 @@ import pfImage from "../../assets/polinesia.jpg";
       top: 10%;
       left: 15%;
       transform: translate(-50%, -50%) scale(0.5);
-      color: var(--color-amber-200);      
+      color: var(--color-amber-200);
     }
   }
   @keyframes heroH1mobile {
@@ -53,7 +57,7 @@ import pfImage from "../../assets/polinesia.jpg";
       top: 10px;
       left: 0px;
       transform: translate(0%, 0%) scale(0.8);
-      color: var(--color-amber-200);      
+      color: var(--color-amber-200);
     }
   }
 
@@ -79,7 +83,7 @@ import pfImage from "../../assets/polinesia.jpg";
       color: var(--color-amber-100);
     }
     to {
-      top:  0;
+      top: 0;
       right: 0%;
       transform: translate(25%, -32%) scale(0.25);
       color: var(--color-amber-200);
@@ -99,7 +103,7 @@ import pfImage from "../../assets/polinesia.jpg";
       var(--color-zinc-500) 0px,
       var(--color-stone-900) 50%,
       var(--color-zinc-900) 100%
-    );    
+    );
     color: var(--color-amber-100);
 
     & .hero > h1 {
@@ -108,7 +112,7 @@ import pfImage from "../../assets/polinesia.jpg";
       margin: 0;
       padding: 0;
       top: 38%;
-      left: 50%;      
+      left: 50%;
 
       view-timeline-name: --heroH1;
       view-timeline-axis: y;
@@ -128,7 +132,7 @@ import pfImage from "../../assets/polinesia.jpg";
       margin: 0;
       padding: 0;
       top: 50%;
-      right: 50%;    
+      right: 50%;
 
       view-timeline-name: --heroH2;
       view-timeline-axis: y;
@@ -141,20 +145,20 @@ import pfImage from "../../assets/polinesia.jpg";
         font-size: 10rem;
         animation-name: heroH2mobile;
       }
-    }    
+    }
   }
   .home-slide-2 {
     width: 100%;
     height: 100dvh;
     background-color: var(--color-zinc-900);
-    display: flex;    
+    display: flex;
     gap: 2rem;
     align-items: center;
     justify-content: space-around;
 
     @media (max-width: 768px) {
       flex-direction: column;
-      justify-content: center;        
+      justify-content: center;
     }
 
     & .card {
@@ -172,8 +176,8 @@ import pfImage from "../../assets/polinesia.jpg";
       align-items: center;
       padding: 12px;
       @media (max-width: 768px) {
-          width: 100%;
-      } 
+        width: 100%;
+      }
 
       & > img {
         aspect-ratio: 16/9;

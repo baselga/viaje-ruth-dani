@@ -1,21 +1,21 @@
 ---
 import mapImage from "../../assets/nortIslandMap.webp";
-import nzSlide1 from "../../assets/nz-slide-1.jpg";
-import nzSlide10 from "../../assets/nz-slide-10.jpg";
-import nzSlide11 from "../../assets/nz-slide-11.jpg";
-import nzSlide2 from "../../assets/nz-slide-2.jpg";
-import nzSlide3 from "../../assets/nz-slide-3.jpg";
-import nzSlide4 from "../../assets/nz-slide-4.jpg";
-import nzSlide5 from "../../assets/nz-slide-5.jpg";
-import nzSlide6 from "../../assets/nz-slide-6.jpg";
+import nzSlide1 from "../../assets/nz-slide-1.webp";
+import nzSlide10 from "../../assets/nz-slide-10.webp";
+import nzSlide11 from "../../assets/nz-slide-11.webp";
+import nzSlide2 from "../../assets/nz-slide-2.webp";
+import nzSlide3 from "../../assets/nz-slide-3.webp";
+import nzSlide4 from "../../assets/nz-slide-4.webp";
+import nzSlide5 from "../../assets/nz-slide-5.webp";
+import nzSlide6 from "../../assets/nz-slide-6.webp";
 import nzSlide7 from "../../assets/nz-slide-7.webp";
-import nzSlide8 from "../../assets/nz-slide-8.jpg";
-import nzSlide9 from "../../assets/nz-slide-9.jpg";
+import nzSlide8 from "../../assets/nz-slide-8.webp";
+import nzSlide9 from "../../assets/nz-slide-9.webp";
 import pin from "../../assets/pin.png";
 
 import Notebook from "../Notebook.astro";
 import Slide from "../Slide.astro";
-import "./pinAnimation.css"
+import "./pinAnimation.css";
 ---
 
 <main class="root">
@@ -27,13 +27,10 @@ import "./pinAnimation.css"
   </header>
   <Slide bgImage={`url(${nzSlide1.src})`} bgPosition="center bottom">
     <Notebook title="Llegamos a Nueva Zelanda" date="Lunes 1/09">
+      <p>A las 05:00 aterrizamos en el aeropuerto internacional de Auckland.</p>
       <p>
-        A las 05:00 (UTC+12) aterrizamos en el aeropuerto internacional de
-        Auckland.
-      </p>
-      <p>
-        Recogemos nuestro coche de alquiler a las 7:30 y nos vamos hacia
-        Hamilton donde pasaremos el primer día.
+        Recogemos el coche de alquiler a las 7:30 y nos vamos a descansar a
+        Hamilton, donde pasaremos el primer día.
       </p>
     </Notebook>
   </Slide>
@@ -52,7 +49,7 @@ import "./pinAnimation.css"
           target="_blank"
           rel="noopener noreferrer">Cuevas de Waitomo</a
         > para explorar sus impresionantes formaciones de piedra caliza y ver las
-        famosas luciérnagas.
+        famosa luz bioluminiscente.
       </p>
       <p>Para finalizar el día, viajamos a Egmont donde dormiremos.</p>
     </Notebook>
@@ -60,51 +57,47 @@ import "./pinAnimation.css"
   <Slide bgImage={`url(${nzSlide3.src})`}>
     <Notebook title="Egmont y traslado a Tongariro" date="Miércoles 3/09">
       <p>
-        Hoy exploramos el Parque Nacional Egmont, cuyo volcán inspiró a J.R.R.
-        Tolkien para crear la Montaña Solitaria.
+        Hoy exploramos el Parque Nacional Egmont, en el que destaca el monte
+        Taranaki y su reflejo sobre el lago Mangamahoe.
       </p>
       <p>
-        Después de una ducha y una comida rápida, nos dirigimos hacia el Parque
-        Nacional Tongariro.
+        Después de una ducha y una comida rápida, continuamos la ruta en coche
+        hacia el Parque Nacional Tongariro.
       </p>
     </Notebook>
   </Slide>
   <Slide bgImage={`url(${nzSlide4.src})`}>
     <Notebook title="Tongariro" date="Jueves 4/09">
       <p>
-        Hoy exploramos el Parque Nacional Tongariro, donde realizamos una
-        caminata por los impresionantes paisajes montañosos.
-      </p>
-      <p>
-        El Monte del Destino, donde Frodo destruye el Anillo Único, es en
-        realidad el monte Ngauruhoe.
+        Este día está dedicado a explorar el montañoso Parque “Tongariro”. Aquí
+        están los volcanes Ngauruhoe y Ruapehu que Peter Jackson utilizó en sus
+        grabaciones para el Monte del Destino y la Montaña Solitaria
+        respectivamente.
       </p>
     </Notebook>
   </Slide>
   <Slide bgImage={`url(${nzSlide5.src})`}>
     <Notebook title="Wai-O-Tapu" date="Viernes 5/09">
       <p>
-        La primera parada del día será en las Tawhai Falls. Es el escenario
-        donde Gollum pesca antes de que Faramir lo capture en <i
+        La primera parada del día será en las Tawhai Falls. Es el Estanque
+        Vedado en Henneth Annûn donde Gollum pesca antes de su captura en <i
           >"Las Dos Torres"</i
         >.
       </p>
       <p>
-        Tras esto visitaremos el área geotérmica de Wai-O-Tapu, famosa por sus
-        coloridas formaciones y el géiser Lady Knox.
+        Luego iremos a Wai-O-Tapu, un parque geotermal famoso por sus géisers y
+        coloridas formaciones.
       </p>
-      <p>Por último, nos dirigiremos a Rotorua a descansar.</p>
     </Notebook>
   </Slide>
   <Slide bgImage={`url(${nzSlide6.src})`}>
     <Notebook title="Rotorua y Redwoods" date="Sábado 6/09">
-      <p>Pasaremos la mañana visitando la ciudad de Rotorua.</p>
       <p>
-        Tras comer nos dirigiremos hacía el bosque de Whakarewarewa a disfrutar
-        de sus enormes secuoyas rojas.
+        Pasaremos la mañana visitando Rotorua. Después de comer pasearemos por
+        el bosque Whakarewarewa para admirar sus enormes secuoyas rojas.
       </p>
       <p>
-        Al atardecer daremos un paseo por <a
+        Al atardecer, daremos un paseo de altura por <a
           href="https://www.redwoods.co.nz/"
           target="_blank"
           rel="noopener noreferrer">Reedwoods Treewalk</a
@@ -116,20 +109,20 @@ import "./pinAnimation.css"
     <Notebook title="Día de playas" date="Domingo 7/09">
       <p>
         Toca visitar playas. Tras un par de horas de coche llegaremos a Pokohino
-        Beach. De ahí iremos a la playa de Te Whanganui-A-Hei (Catedrales).
+        Beach y luego a Te Whanganui-A-Hei (la playa de las Catedrales
+        neozelandesa).
       </p>
-      <p>Para acabar el día nos dirigiremos a Coromandel para descansar.</p>
     </Notebook>
   </Slide>
   <Slide bgImage={`url(${nzSlide8.src})`}>
     <Notebook title="Tren y Coastal Walkway" date="Lunes 8/09">
       <p>
-        Empezaremos el día con un recorrido en tren a través de puentes, túneles
-        y curvas en zig-zag, hasta un mirador llamado Eyefull Tower.
+        Empezaremos el día con un recorrido en tren turístico por un bosque
+        virgen, atravesando puentes y túneles hasta el mirador Eyefull Tower.
       </p>
       <p>
-        Una vez en la costa, realizaremos el Coastal Walkway, un sendero que nos
-        llevará a través de hermosas playas y acantilados.
+        Después haremos caminata por el Coastal Walkway: un sendero que
+        transcurre entre hermosas playas y acantilados.
       </p>
     </Notebook>
   </Slide>
@@ -140,8 +133,8 @@ import "./pinAnimation.css"
         que atraviesa el parque nacional de Coromandel.
       </p>
       <p>
-        Al terminar la excursión, salimos de Thames para devolver el coche en el
-        aeropuerto. Hacemos noche en Auckland.
+        Al terminar la excursión, salimos desde Thames al aeropuerto para
+        devolver el coche. Hacemos noche en Auckland.
       </p>
     </Notebook>
   </Slide>
@@ -149,16 +142,19 @@ import "./pinAnimation.css"
     <Notebook title="Auckland" date="Miércoles 10/09">
       <p>
         Auckland es famosa por su conexión con el mar. Caminaremos por Queen
-        Street, cruzaremos por Viaduct Harbour hasta llegar a Silo Park.
+        Street, pasearemos por Viaduct Harbour y llegaremos hasta Silo Park.
       </p>
-      <p>Por la noche cenaremos en el Sky Tower.</p>
+      <p>
+        Por la noche cenaremos en el Sky Tower con vistas panorámicas a la
+        ciudad.
+      </p>
     </Notebook>
   </Slide>
   <Slide bgImage={`url(${nzSlide11.src})`}>
     <Notebook title="Bye bye NZ!" date="Jueves 11/09">
       <p>
         Tras 11 días en Nueva Zelanda, es hora de despedirnos. Pero este no es
-        el final, nuestro próximo destino nos aguarda.
+        el final… ¡nuestro próximo destino nos aguarda!
       </p>
     </Notebook>
   </Slide>
@@ -198,14 +194,14 @@ import "./pinAnimation.css"
     }
 
     @media (max-width: 768px) {
-     & > .back {
+      & > .back {
         font-size: 1.2rem;
       }
-    & h1 {
-      font-size: 1.5rem;
-    } 
+      & h1 {
+        font-size: 1.5rem;
+      }
     }
-  }  
+  }
   .map {
     z-index: 8;
     position: fixed;
@@ -229,5 +225,5 @@ import "./pinAnimation.css"
         height: 12px;
       }
     }
-  }    
+  }
 </style>
