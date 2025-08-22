@@ -1,17 +1,18 @@
 ---
-import mapImage from "../../assets/nortIslandMap.webp";
-import nzSlide1 from "../../assets/nz-slide-1.webp";
-import nzSlide10 from "../../assets/nz-slide-10.webp";
-import nzSlide11 from "../../assets/nz-slide-11.webp";
-import nzSlide2 from "../../assets/nz-slide-2.webp";
-import nzSlide3 from "../../assets/nz-slide-3.webp";
-import nzSlide4 from "../../assets/nz-slide-4.webp";
-import nzSlide5 from "../../assets/nz-slide-5.webp";
-import nzSlide6 from "../../assets/nz-slide-6.webp";
-import nzSlide7 from "../../assets/nz-slide-7.webp";
-import nzSlide8 from "../../assets/nz-slide-8.webp";
-import nzSlide9 from "../../assets/nz-slide-9.webp";
-import pin from "../../assets/pin.png";
+import mapImage from "../../assets/newZeland/nortIslandMap.webp";
+import nzSlide1 from "../../assets/newZeland/nz-slide-1.webp";
+import nzSlide10 from "../../assets/newZeland/nz-slide-10.webp";
+import nzSlide11 from "../../assets/newZeland/nz-slide-11.webp";
+import nzSlide2 from "../../assets/newZeland/nz-slide-2.webp";
+import nzSlide3 from "../../assets/newZeland/nz-slide-3.webp";
+import nzSlide4 from "../../assets/newZeland/nz-slide-4.webp";
+import nzSlide5 from "../../assets/newZeland/nz-slide-5.webp";
+import nzSlide6 from "../../assets/newZeland/nz-slide-6.webp";
+import nzSlide7 from "../../assets/newZeland/nz-slide-7.webp";
+import nzSlide8 from "../../assets/newZeland/nz-slide-8.webp";
+import nzSlide9 from "../../assets/newZeland/nz-slide-9.webp";
+import pin from "../../assets/newZeland/pin.png";
+import Header from "../Header.astro";
 
 import Notebook from "../Notebook.astro";
 import Slide from "../Slide.astro";
@@ -19,13 +20,8 @@ import "./pinAnimation.css";
 ---
 
 <main class="root">
-  <header class="header font-title">
-    <a href="/" class="back">
-      {"< Volver"}
-    </a>
-    <h1>Nueva Zelanda - R&D</h1>
-  </header>
-  <Slide bgImage={`url(${nzSlide1.src})`} bgPosition="center bottom">
+  <Header title="Nueva Zelanda - R&D" />  
+  <Slide image={nzSlide1} bgPosition="center bottom">
     <Notebook title="Llegamos a Nueva Zelanda" date="Lunes 1/09">
       <p>A las 05:00 aterrizamos en el aeropuerto internacional de Auckland.</p>
       <p>
@@ -34,7 +30,7 @@ import "./pinAnimation.css";
       </p>
     </Notebook>
   </Slide>
-  <Slide bgImage={`url(${nzSlide2.src})`} bgPosition="center bottom">
+  <Slide image={nzSlide2} bgPosition="center bottom">
     <Notebook title="Hobbiton y Waitomo" date="Martes 2/09">
       <p>
         Visita a <a
@@ -54,7 +50,7 @@ import "./pinAnimation.css";
       <p>Para finalizar el día, viajamos a Egmont, donde pasaremos la noche.</p>
     </Notebook>
   </Slide>
-  <Slide bgImage={`url(${nzSlide3.src})`}>
+  <Slide image={nzSlide3}>
     <Notebook title="Egmont y traslado a Tongariro" date="Miércoles 3/09">
       <p>
         Hoy recorreremos el Parque Nacional Egmont, en el que destaca el monte
@@ -66,7 +62,7 @@ import "./pinAnimation.css";
       </p>
     </Notebook>
   </Slide>
-  <Slide bgImage={`url(${nzSlide4.src})`}>
+  <Slide image={nzSlide4}>
     <Notebook title="Tongariro" date="Jueves 4/09">
       <p>
         Este día está dedicado a explorar el montañoso Parque “Tongariro”. Aquí
@@ -76,7 +72,7 @@ import "./pinAnimation.css";
       </p>
     </Notebook>
   </Slide>
-  <Slide bgImage={`url(${nzSlide5.src})`}>
+  <Slide image={nzSlide5}>
     <Notebook title="Wai-O-Tapu" date="Viernes 5/09">
       <p>
         La primera parada del día será en las Tawhai Falls. Es el Estanque
@@ -90,7 +86,7 @@ import "./pinAnimation.css";
       </p>
     </Notebook>
   </Slide>
-  <Slide bgImage={`url(${nzSlide6.src})`}>
+  <Slide image={nzSlide6}>
     <Notebook title="Rotorua y Redwoods" date="Sábado 6/09">
       <p>
         Pasaremos la mañana visitando Rotorua. Después de comer pasearemos por
@@ -106,7 +102,7 @@ import "./pinAnimation.css";
       </p>      
     </Notebook>
   </Slide>
-  <Slide bgImage={`url(${nzSlide7.src})`}>
+  <Slide image={nzSlide7}>
     <Notebook title="Día de playas" date="Domingo 7/09">
       <p>
         Toca visitar playas. Tras un par de horas de coche llegaremos a Pokohino
@@ -115,7 +111,7 @@ import "./pinAnimation.css";
       </p>
     </Notebook>
   </Slide>
-  <Slide bgImage={`url(${nzSlide8.src})`}>
+  <Slide image={nzSlide8}>
     <Notebook title="Tren y Coastal Walkway" date="Lunes 8/09">
       <p>
         Empezaremos el día con un recorrido en tren turístico por un bosque
@@ -127,7 +123,7 @@ import "./pinAnimation.css";
       </p>
     </Notebook>
   </Slide>
-  <Slide bgImage={`url(${nzSlide9.src})`}>
+  <Slide image={nzSlide9}>
     <Notebook title="Waiotahi y Thames" date="Martes 9/09">
       <p>
         Comenzamos con la ruta Waiotahi, un antiguo acceso a las minas de oro
@@ -139,7 +135,7 @@ import "./pinAnimation.css";
       </p>
     </Notebook>
   </Slide>
-  <Slide bgImage={`url(${nzSlide10.src})`}>
+  <Slide image={nzSlide10}>
     <Notebook title="Auckland" date="Miércoles 10/09">
       <p>
         Auckland es famosa por su conexión con el mar. Caminaremos por Queen
@@ -151,7 +147,7 @@ import "./pinAnimation.css";
       </p>
     </Notebook>
   </Slide>
-  <Slide bgImage={`url(${nzSlide11.src})`}>
+  <Slide image={nzSlide11}>
     <Notebook title="Bye bye NZ!" date="Jueves 11/09">
       <p>
         Tras 11 días en Nueva Zelanda, es hora de despedirnos. Pero este no es
@@ -173,36 +169,7 @@ import "./pinAnimation.css";
     flex-direction: column;
     height: 100%;
     background-color: var(--color-zinc-900);
-  }
-
-  .header {
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--color-amber-200);
-    text-shadow: 0 0 4px var(--color-black);
-    z-index: 10;
-    width: 100%;
-    padding: 0 5%;
-    & > .back {
-      color: currentColor;
-      font-size: 1.5rem;
-      transition: color 0.3s ease;
-      &:hover {
-        color: var(--color-amber-200);
-      }
-    }
-
-    @media (max-width: 768px) {
-      & > .back {
-        font-size: 1.2rem;
-      }
-      & h1 {
-        font-size: 1.5rem;
-      }
-    }
-  }
+  }  
   .map {
     z-index: 8;
     position: fixed;

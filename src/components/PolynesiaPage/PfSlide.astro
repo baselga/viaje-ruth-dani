@@ -1,0 +1,78 @@
+---
+import { Image } from "astro:assets";
+
+const { photo, rotate, translate } = Astro.props;
+---
+
+<div class="pf-slide">
+  {photo && (
+    <div class="photo">    
+      <Image src={photo} width={485} height={485} alt="" />      
+    </div>
+  )}
+  <div class="content">
+    <slot />
+  </div>
+</div>
+
+<style define:vars={{ rotate, translateX: translate, translateY: `calc(-50% + ${translate})` }}>
+  .pf-slide {
+    --photo-opacity: 0;
+    width: 100%;
+    height: 100dvh;
+    display: grid;
+    grid-template-columns: minmax(45%, calc(585px + 10%)) auto;
+    position: relative;
+    width: 100%;
+    min-height: 100dvh;
+    padding: 64px 16px;
+
+    view-timeline-name: --fadeIn;
+    view-timeline-axis: y;
+
+    animation-name: fadeIn;
+    animation-timeline: view();
+    animation-fill-mode: both;    
+
+    .content {
+      grid-column: 2;
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      --photo-opacity: 0;
+      --photo-scale: 1;
+    }
+    to {
+      --photo-opacity: 1;
+      --photo-scale: 1;
+    }
+  }
+
+  .photo {
+    position: fixed;
+    top: 50%;
+    left: 8%;
+    width: 45%;
+    max-width: 485px;    
+    padding: 16px 16px 64px 16px;
+    background-color: var(--color-zinc-100);
+    border-radius: 4px;
+    box-shadow: 0 0 0.5rem rgba(0 0 0 / 0.2);
+    z-index: 1;
+    opacity: var(--photo-opacity);
+    transition: all 150ms ease-in-out;
+    transform: translateY(-50%) translateX(var(--translateX)) scale(var(--photo-scale)) rotate(var(--rotate));
+    & img {
+      width: 100%;
+      max-width: 485px;
+      aspect-ratio: 1;
+      object-fit: cover;
+    }
+  }
+</style>

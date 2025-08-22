@@ -1,0 +1,80 @@
+---
+const { bgImage } = Astro.props
+---
+
+<section class="pf-group">
+  <div class="pf-group--bg">
+    <div class="bg bg-tahiti"></div>
+  </div>
+  <div class="pf-group--slides">
+    <slot />
+  </div>
+</section>
+<style define:vars={{ backgroundUrl: bgImage }}>
+  .pf-group {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .pf-group--slides {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  .pf-group--bg {
+      position: sticky;
+      grid-row: 1;
+      grid-column: 1;
+      top: 0;
+      height: 100dvh;
+      
+      & .bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-size: cover;
+        background-attachment: fixed;
+        z-index: 0;
+        background-image: var(--backgroundUrl);
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: #000000;
+          background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 0) 20%,
+            rgba(0, 0, 0, 0) 80%,
+            rgba(0, 0, 0, 1) 100%
+          );
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: #000000;
+          background: radial-gradient(
+            circle,
+            rgba(0, 0, 0, 0.4) 0%,
+            rgba(0, 0, 0, 0.9) 65%
+          );
+          @media (max-width: 768px) {
+            background: radial-gradient(
+              circle,
+              rgba(0, 0, 0, 0.4) 0%,
+              rgba(0, 0, 0, 0.9) 80%
+            );
+          }
+        }        
+      }
+    }
+</style>
