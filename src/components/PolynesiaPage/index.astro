@@ -1,0 +1,156 @@
+---
+import Header from "../Header.astro";
+import Notebook from "../Notebook.astro";
+
+import tahitiBg from "../../assets/polynesia/bg-tahiti.webp";
+import mooreaBg from "../../assets/polynesia/bg-moorea.jpg";
+import farewellBg from "../../assets/polynesia/bg-farewell.jpg";
+
+import thSlide1 from "../../assets/polynesia/th-slide-1.webp";
+import thSlide2 from "../../assets/polynesia/th-slide-2.jpg";
+import thSlide3 from "../../assets/polynesia/th-slide-3.jpg";
+import thSlide4 from "../../assets/polynesia/th-slide-4.webp";
+
+import moSlide1 from "../../assets/polynesia/mo-slide-1.jpg";
+import moSlide2 from "../../assets/polynesia/mo-slide-2.jpg";
+import moSlide3 from "../../assets/polynesia/mo-slide-3.jpg";
+import moSlide4 from "../../assets/polynesia/mo-slide-4.jpg";
+
+import farewellSlide from "../../assets/polynesia/farewellSlide.jpg";
+
+
+
+import PfGroup from "./PfGroup.astro";
+import PfSlide from "./PfSlide.astro";
+---
+
+<main class="root">
+  <Header title="Polinesia Francesa - R&D" />
+
+  <PfGroup photo={mooreaBg} bgImage={`url(${tahitiBg.src})`}>
+    <PfSlide photo={thSlide1} rotate="-6deg" translate="0px">
+      <Notebook title="Tahití" date="Miércoles 10/09">
+        <p>Aterrizamos a las 22h y dormimos cerca del aeropuerto.</p>
+      </Notebook>
+    </PfSlide>
+
+    <PfSlide photo={thSlide2} rotate="6deg" translate="-2px">
+      <Notebook title="Tahití" date="Jueves 11/09">
+        <p>
+          Cogemos el coche de alquilar en el propio alojamiento y veremos en
+          primer lugar las Grutas de Maraa: tres cuevas rodeadas de musgo y
+          helechos que cuelgan del techo, con piscinas naturales de agua dulce
+          en su interior.
+        </p>
+        <p>
+          Luego haremos una corta excursión a la cascada Maruavana y, por la
+          tarde, nos dirigiremos al siguiente hotel, justo en la playa para
+          disfrutar de la puesta de sol.
+        </p>
+      </Notebook>
+    </PfSlide>    
+    <PfSlide photo={thSlide3} rotate="-12deg" translate="3px">
+      <Notebook title="Tahití" date="Jueves 12/09">
+        <p>
+          Arrancamos el día con una excursión al Plateau de Taravao, que
+          ofrece vistas panorámicas de praderas y lagos tranquilos, con la
+          costa al fondo. Es un entorno rural que contrasta con playas
+          tropicales.
+        </p>
+        <p>
+          A continuación, visitaremos el Teahupoo Wave, el punto de encuentro
+          para avistar la famosa ola gigante a la que los surferos llaman “el
+          monstruo sagrado de Tahití”.
+        </p>
+      </Notebook>
+    </PfSlide>
+    <PfSlide photo={thSlide4} rotate="-2deg" translate="0px">
+        <Notebook title="Tahití" date="Viernes 13/09">
+          <p>
+            Nos despedimos de Tahití y tomamos el ferry hacia la isla de Moorea.
+            El resto del día será relajado: nos quedaremos por la zona del hotel
+            para hacer un hiato y descansar.
+          </p>
+        </Notebook>
+    </PfSlide>
+  </PfGroup>
+
+  <PfGroup bgImage={`url(${mooreaBg.src})`}>
+      <PfSlide photo={moSlide1} rotate="-7deg" translate="-2px">
+          <Notebook title="Moorea" date="Sábado 14/09">
+            <p>
+              La mañana la dedicaremos investigar los alrededores del hotel y
+              disfrutar de sus vistas e instalaciones.
+            </p>
+            <p>
+              A media mañana tendremos curso de buceo privado con
+              grabación incluida para tener recuerdos inolvidables. Después de la
+              sesión instructiva, la inmersión se lleva a cabo durante media hora
+              y unos 6 metros de profundidad, ideal para principiantes.
+            </p>
+            <p>
+              Por la noche, iremos a cenar a Maharepa y veremos un baile tradicional.
+            </p>
+          </Notebook>
+      </PfSlide>
+      <PfSlide photo={moSlide2} rotate="1deg" translate="8px">
+        <Notebook title="Moorea" date="Domingo 15/09">
+          <p>
+            Haremos excursión a Col Des Trois Cocotiers o bien al mirador
+              Belvédère de Opunohu. Y, por la tarde, iremos en barco a avistar
+              ballenas jorobadas y a hacer snorkel en las aguas cristalinas para
+              ver la fauna marina: tiburones de punta negra, rayas, tortugas,
+              delfines y peces de todo tipo.
+            </p>
+          </Notebook>
+        </PfSlide>
+      <PfSlide photo={moSlide3} rotate="6deg" translate="12px">
+          <Notebook title="Moorea" date="Lunes 16/09">
+            <p>
+              Excursión (contratada o por nuestra cuenta) por el interior para ver
+              la Montaña Mágica, también llamada "Montaña de la Reina”, es el pico
+              icónico de la isla que se eleva detrás de la laguna y el área de
+              Temae.
+            </p>
+            <p>
+              También iremos a la cascada Afareaitu, que está rodeada de
+              vegetación y que desemboca en una poza. Es un lugar idóneo para
+              hacer picnic.
+            </p>
+          </Notebook>
+        </PfSlide>
+      <PfSlide photo={moSlide4} rotate="-4deg" translate="5px">
+        <Notebook title="Moorea" date="Martes 17/09">
+          <p>
+            Por la mañana, cuando la marea está más tranquila y hay mejor
+              visibilidad, haremos kayak y snorkel en la laguna. Por la tarde
+              pasearemos por la playa Tiahura (arena clara con aguas turquesas y
+              vistas a motus cercanos).
+            </p>
+            <p>
+              Para terminar el día veremos atardecer desde el mirador Toatea y así
+              disfrutaremos de una última vista panorámica de la isla.
+            </p>
+          </Notebook>
+        </PfSlide>
+      </PfGroup>
+
+    <PfGroup bgImage={`url(${farewellBg.src})`}>
+      <PfSlide photo={farewellSlide} rotate="2deg" translate="-10px">
+          <Notebook title="Tahití" date="Sábado 14/09">
+            <p>
+              ¡Fin del camino! Regresamos a Tahití en ferry y nos iremos al hotel
+              para hacer las maletas y tomarnos una merecida tarde de descanso antes
+              del largo viaje de vuelta.
+            </p>
+          </Notebook>
+        </PfSlide>
+      </PfGroup>
+    </PfGroup>  
+</main>
+
+<style>
+  .root {
+    background-color: var(--color-zinc-900);
+  }  
+</style>

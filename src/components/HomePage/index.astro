@@ -1,6 +1,7 @@
 ---
+import { Image } from "astro:assets";
 import nzImage from "../../assets/nuevaZelanda.webp";
-import pfImage from "../../assets/polinesia.jpg";
+import pfImage from "../../assets/polynesia/pf-card.jpg";
 ---
 
 <main class="root">
@@ -13,15 +14,14 @@ import pfImage from "../../assets/polinesia.jpg";
   </section>
   <section class="home-slide-2">
     <a class="card" href="/nueva-zelanda">
-      <img
-        src={nzImage.src}
-        alt="Nueva Zelanda"
-        style="view-transition-name: image-1;"
+      <Image
+        src={nzImage}
+        alt="Nueva Zelanda"        
       />
       <h3 class="font-title">Nueva Zelanda</h3>
     </a>
-    <a class="card" href="/">
-      <img src={pfImage.src} alt="Polinesia Francesa" />
+    <a class="card" href="/polinesia">
+      <Image src={pfImage} alt="Polinesia Francesa" />
       <h3 class="font-title">Polinesia Francesa</h3>
     </a>
   </section>

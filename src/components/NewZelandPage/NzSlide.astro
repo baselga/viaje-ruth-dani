@@ -1,16 +1,19 @@
 ---
-const { bgImage, bgPosition = "center top" } = Astro.props;
+import { getImage } from "astro:assets";
+
+const { image, bgPosition = "center top" } = Astro.props;
+
+const background = await getImage({src: image})
 ---
 
 <section class="slide">
-  <div class="background"></div>
-  <!-- <img class="slide-image" src={bgImage.src} alt="" /> -->
+  <div class="background"></div>  
   <div class="content">
     <slot />
   </div>
 </section>
 
-<style define:vars={{ backgroundUrl: bgImage, bgPosition }}>
+<style define:vars={{ backgroundUrl: `url(${background.src})`, bgPosition }}>
   .slide {    
     display: grid;    
     grid-template-columns: minmax(45%, calc(585px + 10%)) auto;
