@@ -27,6 +27,10 @@ const { photo, rotate, translate } = Astro.props;
     min-height: 100dvh;
     padding: 64px 16px;
 
+     @media (max-width: 768px) {
+      grid-template-columns: 20% auto;          
+    }
+
     view-timeline-name: --fadeIn;
     view-timeline-axis: y;
 
@@ -74,5 +78,16 @@ const { photo, rotate, translate } = Astro.props;
       aspect-ratio: 1;
       object-fit: cover;
     }
+    @media (max-width: 768px) {
+      padding: 4px 4px 16px 4px;
+      width: auto;
+      top: calc(100% - 110px);
+      left: 24px;      
+
+      & img {
+        width: 150px;
+        height: 150px;
+      }
+    }    
   }
 </style>
